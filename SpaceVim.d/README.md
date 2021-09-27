@@ -116,7 +116,7 @@ q 恢复vim 模式
   | SPC t w | ⓦ       | w     | 行尾空格检查         |
 
 ## markdown
-
+```
 | 功能     | 快捷键    |
 |----------|-----------|
 | 预览     | \<F12\>   |
@@ -130,6 +130,7 @@ q 恢复vim 模式
 | next<++> | , f       |
 |----------|-----------|
 
+```
 
 
 ## FileTree
@@ -150,19 +151,17 @@ q 恢复vim 模式
 ```
 
 ## 导航键 [SPC] s "\"(默认的leader), g z
-  - s 文件关闭打开等
-    ```
+
+  s 文件关闭打开等
+  ```
     新建：s-t
     退出：s-q
     关闭其它：s-o
     清理当前buffer：s-x
     清理全部buffer：s-c
-    ```
-  - g 多光标选择
-    ```
-
-    ```
-  - z 折行
+   ```
+  g 多光标选择
+  z 折行
 
 ## 自定义[SPC]
 
@@ -307,7 +306,7 @@ q 恢复vim 模式
 :let  <tab>         # 可查看所有let 参数
 ```
 
-- [办法  [参考]()https://www.reddit.com/r/vim/comments/do98do/how_do_i_get_the_pretty_icons_for_diagnostic/
+办法  [参考](https://www.reddit.com/r/vim/comments/do98do/how_do_i_get_the_pretty_icons_for_diagnostic/)
 增加~/.SpaceVim/coc-settings.json
 生效代码应该是 "git.enableGutters": false,这样就是用gitgutter插件的git提醒,错误检查和报警使用coc.nvim的
 
@@ -427,4 +426,9 @@ pip install --upgrade autopep8
 ## ,n 显示目录
 ```
 :CocCommand explorer
+```
+## 调整配置
+```
+set foldmethod=indent # 打开折行
+automatic_update = false # 关闭自动更新
 ```

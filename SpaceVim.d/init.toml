@@ -3,7 +3,7 @@
 # Copyright (c) 2016-2017 Wang Shidong & Contributors
 # Author: Wang Shidong < wsdjeg at 163.com >
 # URL: https://spacevim.org
-# License: GPLv3  使用vim， nvim 还是有问题有些插件莫名其妙的矿山光标放弃
+# License: GPLv3  使用vim， nvim 还是有问题
 #=============================================================================
 
 # All SpaceVim option below [option] section
@@ -12,7 +12,7 @@
   # if you want to use more colorscheme, please load the colorscheme
   # layer
   # 自动更新
-  automatic_update = true
+  automatic_update = false
 
   default_indent = 4
   expand_tab = true
