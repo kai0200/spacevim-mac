@@ -20,7 +20,7 @@ p - project
 ```
 | Keys             | 快捷键说明 |
 |------------------|------------|
-| ":g/^###/s/$//g" |            |
+| ":g/^##/s/$//g" |            |
 ```
 
 ## 自定义快捷键
@@ -57,19 +57,19 @@ function! myspacevim#before() abort
 endfunction
 ```
 
-### 查看日志
+## 查看日志
 
 ```viml
 :SPDebugInfo!
 ```
 
-### 禁用插件
+## 禁用插件
 
 ```vim
 disabled_plugins = ["clighter", "clighter8"]
 ```
 
-### 修改windows 键
+## 修改windows 键
 
 ```
 spacevim_windows_leader:  s
@@ -77,35 +77,35 @@ spacevim_windows_leader:  s
   windows_leader = ''
 ```
 
-### 恢复默认vim  f F t T
+## 恢复默认vim  f F t T
   ```
   [options]
     enable_language_specific_leader = false
   ```
 
-### 宏录制
+## 宏录制
 ```
 q 恢复vim 模式
 [options]
   windows_smartclose = ''
 ```
 
-### 命令行方向键
+## 命令行方向键
   Ctrl-a Ctrl-b Ctrl-f
 
-### 恢复vim 所有默认快捷键
+## 恢复vim 所有默认快捷键
   vimcompatible = true
 
-### 添加本地克隆版本插件
+## 添加本地克隆版本插件
   ```
   function! myspacevim#before() abort
     set rtp+=~/path/to/your/localplugin
   endfunction
   ```
-### 随机下一个主题
+## 随机下一个主题
   SPC T n
 
-### 状态栏显示
+## 状态栏显示
 
   | 快捷键  | Unicode | ASCII | 功能                 |
   |---------|---------|-------|----------------------|
@@ -115,17 +115,24 @@ q 恢复vim 模式
   | SPC t S | Ⓢ       | S     | 拼写检查             |
   | SPC t w | ⓦ       | w     | 行尾空格检查         |
 
-### markdown
+## markdown
 
-| 功能 | 快捷键    |
-|------|-----------|
-| 预览 | \<F12\>   |
-| 停止 | \<F11\>   |
-| 表格 | ,tm       |
-| 预览 | [SPC] l p |
+| 功能     | 快捷键    |
+|----------|-----------|
+| 预览     | \<F12\>   |
+| 停止     | \<F11\>   |
+| 表格     | ,tm       |
+| 预览     | [SPC] l p |
+| #        | , 1       |
+| ##       | , 2       |
+| ##      | , 3       |
+| ```      | , c       |
+| next<++> | , f       |
+|----------|-----------|
 
 
-### FileTree
+
+## FileTree
   新建文件: N
   显示隐藏: .
   预览: p
@@ -134,7 +141,7 @@ q 恢复vim 模式
   刷新: Ctrl+r
   切换窗口文件: Ctrl+x
 
-### q 宏
+## q 宏
 ```
 <leader> q r  原生 q 快捷键
 <leader> q r/  原生 q / 快捷键，打开命令行窗口
@@ -142,7 +149,7 @@ q 恢复vim 模式
 <leader> q r:  原生 q : 快捷键，打开命令行窗口
 ```
 
-### 导航键 [SPC] s "\"(默认的leader), g z
+## 导航键 [SPC] s "\"(默认的leader), g z
   - s 文件关闭打开等
     ```
     新建：s-t
@@ -157,65 +164,65 @@ q 恢复vim 模式
     ```
   - z 折行
 
-### 自定义[SPC]
+## 自定义[SPC]
 
   ```vim
   call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
   [SPC] ? 看帮助
   ```
 
-### 格式化代码
+## 格式化代码
   [SPC] b f
 
-### 运行代码块
+## 运行代码块
   [SPC] l r
 
-### 多光标修改
+## 多光标修改
   Ctrl+m Ctrl+x Ctrl+p
 
-### 按等号对齐
+## 按等号对齐
   [SPC] x a =
 
-### 将选中字符串转为大写
+## 将选中字符串转为大写
   [SPC] x U
 
-### 数字+1
+## 数字+1
   [SPC] n + (临时快捷键模式+ -)
 
-### 注释/反注释
+## 注释/反注释
   [SPC] c l   CU: ,/
 
-### 切换标签
+## 切换标签
   gr
 
-### coc 缺少shell
+## coc 缺少shell
   `npm i -g bash-language-server`
 
-### 退出配置解决完毕
+## 退出配置解决完毕
   Ctrl+t newfile  ,q退出当前标签 原操作 st   sx
 
-### 保存
+## 保存
   Ctrl+s ,w
 
-### 调整窗口
+## 调整窗口
   [SPC] w .
 
-### 缓冲区清理
+## 缓冲区清理
   [SPC] b . 缓冲区清理  SPC b C-d  删除其它所有缓冲区
 
-### 打开初始页面
+## 打开初始页面
   [SPC] b h
 
-### 标签
+## 标签
   打标记 mm  切换: mn  mp mi
 
-### 看所有模块
+## 看所有模块
   命令 :SPLayer -l 或者快捷键 SPC h l 来展示
 
-### 模糊查找快捷键，并执行该快捷键
+## 模糊查找快捷键，并执行该快捷键
   <Leader> f <Space>
 
-### 搜索功能 spc  s
+## 搜索功能 spc  s
    1. 本文件  s s
    2. 目录    s d
    3. 任意目录 s f
@@ -223,7 +230,7 @@ q 恢复vim 模式
    5. 后台 s j
    6. 网上 s w
 
-### 实时代码检索 spc s g G
+## 实时代码检索 spc s g G
 
 | 快捷键    | 功能描述                                           |
 |-----------|----------------------------------------------------|
@@ -232,7 +239,7 @@ q 恢复vim 模式
 | SPC h k   | 使用快捷键导航，展示 SpaceVim 所支持的前缀键       |
 | SPC h m   | 使用 Unite 浏览所有 man 文档                       |
 
-### 常用的成对快捷键
+## 常用的成对快捷键
   [ q  跳至前一个错误
   ] q  跳至下一个错误
   [ t  跳至前一个标签页
@@ -240,21 +247,21 @@ q 恢复vim 模式
   [ w  跳至前一个窗口
   ] w  跳至下一个窗口
 
-### 以 g 为前缀的快捷键
+## 以 g 为前缀的快捷键
   g '  跳至标签
   g *  正向搜索光标下的词
 
-### yw /(Ctrl+R0)
+## yw /(Ctrl+R0)
   让光标停留在单词的第一个字母上， 然后输入yw拷贝该单词， 然后输入 / (Ctrl + R) 0 （即 /”0），回车， 就查找到了第一个匹配的单词， 并且可以通过 n  或  N 进行上一个或下一个的匹配
 
-### v 选中要复制的文字
+## v 选中要复制的文字
   <leader>c (实际操作为 "+y) 拷贝,
 
-### 多光标
+## 多光标
   1. [SPC] se
   2. [SPC] sh
 
-### 错误管理导航键 (以 e 开头)：   spc  e   l
+## 错误管理导航键 (以 e 开头)：   spc  e   l
 
 | 快捷键  | 功能描述                                                                    |
 |---------|-----------------------------------------------------------------------------|
@@ -268,7 +275,7 @@ q 恢复vim 模式
 | SPC e . | 错误暂态（error transient state)                                            |
 
 
-### quickfix 列表移动
+## quickfix 列表移动
 
 | 快捷键       | 功能描述                       |
 |--------------|--------------------------------|
@@ -277,7 +284,7 @@ q 恢复vim 模式
 | <Leader> q n | 跳到 quickfix 列表中下一个位置 |
 | <Leader> q p | 跳到 quickfix 列表中上一个位置 |
 
-### python2/3 设置
+## python2/3 设置
 ```shell
 # 在.bashrc 或 .zshrc 增加设置
 # For coc.nvim python
@@ -285,9 +292,10 @@ q 恢复vim 模式
   export PYTHON3_HOST_PROG="/usr/local/opt/python@3.8/bin/python3.8"
 ```
 
-### git.gitgutter 装订线(左边侧栏重复显示问题)
+## git.gitgutter 装订线(左边侧栏重复显示问题)
 
 安装的gitgutter 可以很好的显示git diff 增加删除修改等, 现有coc.nvim也出现提示标丑,想禁止掉查找很久.
+:CocUninstall coc-git
 
 - 命令总结
 ```vim
@@ -358,7 +366,7 @@ q 恢复vim 模式
 
 ```
 
-### F4 - key
+## F4 - key
 
 ```
 " 保证在插入模式<F4>可以 toggle floaterm
@@ -374,7 +382,7 @@ let g:floaterm_keymap_prev   = '<C-h>'
 let g:floaterm_keymap_next   = '<C-l>'
 ```
 
-### Log
+## Log
 
 ```
 -  2021年 04月 15日 星期四 18:30:55 CST
@@ -385,11 +393,19 @@ let g:floaterm_keymap_next   = '<C-l>'
   coc 冲突造成、禁用了spacevim自己的markdown 模块
   .markdownlintrc 文件禁用coc-markdownlint相关警告等
 ```
-### vimproc 编译
-    defx 需要vimproc 编译.SpaceVim-20201023/bundle/vimproc.vim/lib/vimproc_mac.so
-    :VimProcInstall 编译脚本
+
+## vimproc 编译
+```
+- defx 需要vimproc 编译.SpaceVim-20201023/bundle/vimproc.vim/lib/vimproc_mac.so
+    VimProcInstall 编译脚本
     cd $HOME/.vim/bundle/vimproc.vim
-    make
-    错误：:
+    make 报错，vimproc vimfiler 插件调用mac编译报错，还是使用defx
+    SPUpdate 后defx不显示图标，暂时回滚到备份前状态不做升级
+```
 
-
+## 弃用coc-python 改为coc-pyright
+```
+错误信息：Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+:CocUninstall coc-python
+:CocUninstall coc-git Git状态显示丑
+```
