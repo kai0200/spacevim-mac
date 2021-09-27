@@ -146,6 +146,8 @@ nmap <leader>r <Plug>(coc-translator-rv)
 "nmap <leader>c :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <leader>c :call CocActionAsync('doHover')<CR>
 
+map <leader>n :CocCommand explorer<cr>
+
 " Manage extensions
 " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands

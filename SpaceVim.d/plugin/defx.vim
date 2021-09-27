@@ -5,7 +5,7 @@ call defx#custom#option('_', {
 " <leader>n "  jedi 占用了,n 查jedi git 配置修改到plugin/jedi.vim 生效了
 " ~/.SpaceVim.d/plugin/jedi.vim
 " 在此处加入的可能被其他插件覆盖,去plugin里添加一个修改掉就可以了
-map <leader>n :Defx<cr>
+"map <leader>n :Defx<cr>
 
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : '✹',

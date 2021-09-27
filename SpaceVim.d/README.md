@@ -409,3 +409,22 @@ let g:floaterm_keymap_next   = '<C-l>'
 :CocUninstall coc-python
 :CocUninstall coc-git Git状态显示丑
 ```
+## [coc.nvim] Formatting with autopep8 failed: autopep8 module is not installed
+```
+# autoload/myspacevim.vim  确认一下用的是哪个python
+pip install pep8
+pip install --upgrade autopep8
+保存文件时会自动调取autopep8
+```
+
+## 翻译快捷键
+```
+,c
+,e
+,t
+```
+
+## ,n 显示目录
+```
+:CocCommand explorer
+```
